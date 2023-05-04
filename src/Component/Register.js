@@ -1,14 +1,17 @@
 import React from 'react';
 import "./Register.css";
-import Navbar from "./Navbar"
-import { DataGrid } from '@mui/x-data-grid'
+import Navbar from "./Navbar";
+import { DataGrid } from '@mui/x-data-grid';
+import Lapis from '../Component/Icons/lapis.png';
+import { Button } from '@mui/material';
+import 
 
 export default function Register() {
 
 const columns = [
-  { field: 'id', headerName: 'ID', width: 70 },
-  { field: 'firstName', headerName: 'First name', width: 130 },
-  { field: 'lastName', headerName: 'Last name', width: 130 },
+  { field: 'id', headerName: 'Data', width: 110 },
+  { field: 'firstName', headerName: 'Nome', width: 130 },
+  { field: 'lastName', headerName: 'Descrição', width: 130 },
   {
     field: 'age',
     headerName: 'Age',
@@ -26,27 +29,33 @@ const columns = [
   },
   {
     field: 'action',
-    headerName: 'Active',
+    headerName: 'Alterar',
     width:130,
     renderCell:(params) =>{
       return(
-        <button className='userListEdit'>Alterar</button>
+        <Button className='lapisEdit'>
+          <div className='lapisDiv'>
+            <img className='lapisImg' src={`${Lapis}`}/>
+          </div>
+        </Button>
       )
     }
   },
 ];
 
 const rows = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-  { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+  { id: '10/02/2023', lastName: 'Snow', firstName: 'Jon', age: 35 },
+  { id: '11/02/2023', lastName: 'Lannister', firstName: 'Cersei', age: 42 },
+  { id: '11/03/2023', lastName: 'Lannister', firstName: 'Jaime', age: 45 },
+  { id: '11/03/2023', lastName: 'Stark', firstName: 'Arya', age: 16 },
+  { id: '11/03/2023', lastName: 'Targaryen', firstName: 'Daenerys', age: null },
+  { id: '11/03/2023', lastName: 'Melisandre', firstName: 'Tiago', age: 150 },
+  { id: '11/03/2023', lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
+  { id: '11/03/2023', lastName: 'Frances', firstName: 'Rossini', age: 36 },
+  { id: '11/03/2023', lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+  { id: '11/03/2023', lastName: 'Roxie', firstName: 'Harvey', age: 65 },
 ];
+
  return (
    <div className='TeamMembers'>
       <Navbar/>

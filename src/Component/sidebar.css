@@ -1,7 +1,6 @@
 .mainSidebarContainer{
     flex: 0.8;
-    background-color: rgb(247, 247, 247);
-    height: 100vh;
+    background-color: #192A64;
 }
 
 .ulContainer{
@@ -16,7 +15,7 @@
 
 .menu{
     display: flex;
-    color: rgb(66, 69, 72);
+    color: white;
     margin-left: -10px;
 }
 
@@ -37,7 +36,7 @@
 
 .itemNames{
     margin-left: 10px;
-    color: rgb(70, 76, 81);
+    color: white;
 }
 
 .ScheduledContainer{

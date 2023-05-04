@@ -16,10 +16,12 @@ export default function Sidebar() {
         <div>
             <ul className='ulContainer'>
                 <h4 className='menu'>Menu</h4>
+                <Link to={"/"} style={{textDecoration:"none"}}>
                 <li className='liContainer'>
                     <img src={`${Home}`} className='sidebaricons' alt=""/>
                     <p className='itemNames'>Home</p>
                 </li>
+                </Link>
                 <Link to={"/list"} style={{textDecoration:"none"}}>
                 <li className='liContainer'>                  
                     <img src={`${DailyTask}`} className='sidebaricons' alt=""/>
@@ -44,21 +46,7 @@ export default function Sidebar() {
                 </li>
             </ul>
 
-            <div className='mainSchedeledContainer'>
-                <h4 className='SchedeledTitle'>Eventos</h4>
-                <div className='ScheduledContainer'>
-                    <input type="radio" value={"Hubby Bday"}/>
-                    <label htmlFor="Hubby Bday">Hubby Bday</label>
-                </div>
-                <div className='ScheduledContainer'>
-                    <input type="radio" value={"Sis Aniversary"}/>
-                    <label htmlFor="Sis Aniversary">Sis Aniversary</label>
-                </div>
-                <div className='ScheduledContainer'>
-                    <input type="radio" value={"Bestie Wedding"}/>
-                    <label htmlFor="Bestie Wedding">Bestie Wedding</label>
-                </div>
-            </div>
+            
         </div>
    </div>
  );
