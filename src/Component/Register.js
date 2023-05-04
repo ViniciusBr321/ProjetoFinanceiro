@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import { DataGrid } from '@mui/x-data-grid';
 import Lapis from '../Component/Icons/lapis.png';
 import { Button } from '@mui/material';
-import 
+
 
 export default function Register() {
 
