@@ -4,20 +4,27 @@ import Navbar from "./Navbar";
 import { DataGrid } from '@mui/x-data-grid';
 import Lapis from '../Component/Icons/lapis.png';
 import { Button } from '@mui/material';
+import Modal from "react-modal";
+import { useState } from "react";
+
 
 
 export default function Register() {
+Modal.setAppElement("#root")
+const [modalIsOpen, setIsOpen] = useState(false);
+function openModal() {
+  setIsOpen(true);
+}
+function closeModal() {
+  setIsOpen(false);
+}
 
 const columns = [
-  { field: 'id', headerName: 'Data', width: 110 },
-  { field: 'firstName', headerName: 'Nome', width: 130 },
+  { field: 'id', headerName: 'id', width: 110 },
+  { field: 'date', headerName: 'data', width: 110},
+  { field: 'firstName', headerName: 'Nome', width: 150 },
   { field: 'lastName', headerName: 'Descrição', width: 130 },
-  {
-    field: 'age',
-    headerName: 'Age',
-    type: 'number',
-    width: 90,
-  },
+
   {
     field: 'fullName',
     headerName: 'Full name',
@@ -33,27 +40,39 @@ const columns = [
     width:130,
     renderCell:(params) =>{
       return(
-        <Button className='lapisEdit'>
-          <div className='lapisDiv'>
-            <img className='lapisImg' src={`${Lapis}`}/>
-          </div>
-        </Button>
+        <div className='selectModal'>
+          <button onClick={openModal} className='buttonModal'>
+             <img src={`${Lapis}`} className='sidebaricons' alt=""/> 
+          </button>
+          <Modal
+            isOpen={modalIsOpen}
+            onRequestClose={closeModal}
+            contentLabel='Teste'
+            overlayClassName="modal-overlay"
+            className="modal-content"
+          >
+            <h3>test teste</h3>
+
+            <button onClick={closeModal}>Fechar</button>
+          </Modal>
+        </div>
+
       )
     }
   },
 ];
 
 const rows = [
-  { id: '10/02/2023', lastName: 'Snow', firstName: 'Jon', age: 35 },
-  { id: '11/02/2023', lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-  { id: '11/03/2023', lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-  { id: '11/03/2023', lastName: 'Stark', firstName: 'Arya', age: 16 },
-  { id: '11/03/2023', lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-  { id: '11/03/2023', lastName: 'Melisandre', firstName: 'Tiago', age: 150 },
-  { id: '11/03/2023', lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  { id: '11/03/2023', lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: '11/03/2023', lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-  { id: '11/03/2023', lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+  { id: '1', date: '12/05/2023', firstName: 'Clara' , lastName: 'Notinha'},
+  { id: '2', date: '12/05/2023', firstName: 'Marcus', lastName: 'Notinha'},
+  { id: '3', date: '18/05/2023', firstName: 'Jeferson', lastName: 'Notinha'},
+  { id: '4', date: '25/05/2023', firstName: 'Simas', lastName: 'Notinha'},
+  { id: '5', date: '27/05/2023', firstName: 'Paula', lastName: 'Notinha'},
+  { id: '6', date: '11/05/2023', firstName: 'Cleide', lastName: 'Notinha'},
+  { id: '7', date: '08/05/2023', firstName: 'Ana', lastName: 'Notinha'},
+  { id: '8', date: '21/06/2023', firstName: 'Frances', lastName: 'Notinha'},
+  { id: '9', date: '15/04/2023', firstName: 'Roberto', lastName: 'Notinha'},
+  { id: '10', date: '01/04/2023', firstName: 'Laura', lastName: 'Notinha'},
 ];
 
  return (
