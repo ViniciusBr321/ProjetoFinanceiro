@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Logo from "../.././img/Logo.png";
-import Notificacao from "../.././img/Notificacao.png";
-import Usuario from "../.././img/Usuario.png";
+import Logo from "../Icons/Logo.png";
+import Notificacao from "../Icons/Notificacao.png";
+import Usuario from "../Icons/Usuario.png";
 import { Container, lightTheme } from './styles';
 import { FaBars } from 'react-icons/fa';
 import Sidebar from '../Sidebar';

@@ -27,7 +27,7 @@
     background-color: aliceblue;
     width: 97%;
     height: 11%;
-    margin-top: 2%;
+    margin-top: 1%;
     margin-left: 0.3%;
     border-radius: 10px;
     display: flex;
@@ -38,7 +38,7 @@
 
 .taskProgress{
     text-align: left;
-    margin-left: 12%;
+    margin-left: 7%;
     margin-top: 22%;
     font-weight: 600;
     width: 110%;
@@ -80,14 +80,14 @@
 }
 
 .barchartContainer{
-    width: 60%;
     display: flex;
     margin-left: 10%;
+    margin-top: 3.6%;
 }
 
 .barchartContainer2{
-    margin-left: 30px;
-    margin-top: 12px;
+    margin-left: 1%;
+    margin-top: 4%;
 }
 
 .subitemContainer{

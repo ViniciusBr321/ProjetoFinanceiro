@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Content } from './styles'
+import { Container, Content } from './styles.js'
 import {
     FaTimes,
     FaHome,
@@ -9,7 +9,7 @@ import {
     FaSortAmountUp,
     FaSortAmountDownAlt,
 } from 'react-icons/fa';
-import SidebarItem from '../SidebarItem'
+import SidebarItem from '../SidebarItem/index.jsx'
 
 const Sidebar = ({ active }) => {
     const closeSidebar = () => {
@@ -38,4 +38,3 @@ const Sidebar = ({ active }) => {
 }
 
 export default Sidebar;
-

@@ -3,16 +3,17 @@ import styled from 'styled-components';
 export const Container = styled.div`
     height: 100px;
     display: flex;
-    backgrond-color: #363636;
+    background-color: #363636;
     box-shadow: 0 0 10px 3px;
 
     > svg {
-        position: fixed;
+        position: absolute;
         color: white; 
-        width: 30px;
-        height: 30px;
-        margin-top: 32px;
-        margin-left: 32px;
+        width: 2%;
+        margin-right: 5%;
+        height: 5%;
+        margin-top: 2.5%;
+        margin-left: 2.2%;
         cursor: pointer;
     }
 `;

@@ -7,19 +7,23 @@ export const Container = styled.div`
     height: 100%;
     top: 0px;
     left: 0px;
-    width: 300px;
+    width: 20%;
     left: ${props => props.sidebar ? '0' : '-100%'};
     animation: showSidebar .4s;
+    z-index: 9999;
+
+
 
     > svg {
         position: fixed;
         color: White;
-        width: 30px;
-        height: 30px;
-        margin-top: 32px;
-        margin-left: 32px;
+        height: 3.9%;
+        width: 1.7%;
+        right: 97%;
+        bottom: 91%;
         cursor: pointer;
     }
+
 
 @keyframes showSidebar {
     from{

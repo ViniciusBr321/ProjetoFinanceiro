@@ -8,7 +8,7 @@ const SidebarItem = ({ Icon, Text}) => {
             <Icon />
             {Text}
         </Container>
-    )
-}
+    );
+};
 
 export default SidebarItem;

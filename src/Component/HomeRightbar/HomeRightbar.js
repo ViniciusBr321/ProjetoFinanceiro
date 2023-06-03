@@ -264,7 +264,6 @@ export default function HomeRightbar() {
 
   return (
     <div className='mainHomeRightbar'>
-      <Navbar />
       <div>
         <div className='ItemContainer'>
           <div className='ItemContainer1'>
@@ -303,7 +302,7 @@ export default function HomeRightbar() {
             </div>
             <div className='barchartContainer2'>
               <LineChart width={200} height={110} data={data3}
-                margin={{ top: 5, right: 20, left: 20, bottom: 5 }}>
+                margin={{ top: 5, right:20, left: 20, bottom: 4 }}>
                 <Tooltip />
                 <Line type="monotone" dataKey="pv" stroke="#8884d8" />
                 <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
@@ -314,8 +313,8 @@ export default function HomeRightbar() {
             <div>
               <p className='TaskCreated'>Pagar/Receber</p>
             </div>
-            <AreaChart width={1087} height={190} data={data4}
-              margin={{ top: 10, right: 20, left: 50, bottom: 10 }}>
+            <AreaChart width={1300} height={190} data={data4}
+              margin={{ top: 10, right: 0, left: 125, bottom: 10 }}>
               <defs>
                 <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
