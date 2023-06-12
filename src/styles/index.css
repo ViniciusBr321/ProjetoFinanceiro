@@ -1,0 +1,231 @@
+.action-icons{
+  display: flex;
+  
+}
+
+#Delete-icon{
+  box-shadow: 0px 10px 13px -7px #ed1515;
+	background:linear-gradient(to bottom, #f0182a 5%, #e63333 100%);
+	background-color:#f0182a;
+	border-radius:4px;
+	border:1px solid #f01818;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	padding:5px 9px;
+  margin-left: 5px;
+}
+
+#Delete-icon:hover {
+	background:linear-gradient(to bottom, #e63333 5%, #f0182a 100%);
+	background-color:#e63333;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+#Edit-icon{
+  box-shadow: 0px 10px 14px -7px #3e7327;
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	background-color:#77b55a;
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	padding:5px 8px;
+  width: fit-content;
+  margin-right: 5px;
+}
+
+#Edit-icon:hover {
+	background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	background-color:#72b352;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.edit{
+    background: #8fd591;
+    border-radius: 20%;
+    width: 100%;
+    padding-top: 5%;
+    padding-left: 1%;
+    color: #1a4474
+}
+
+.confirm-delete {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: #c62828 !important; 
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+   }
+   
+
+.form-valor{
+        display: block;
+        width: 100%;
+        height: calc(1.5em + .75rem + 2px);
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.required-add{
+    color: red;
+}
+
+
+  
+  .fa-icon-xmark {
+    color: red;
+    font-size: 1.4rem;
+    
+  }
+  
+  
+  .custom-footer button{
+    width: 100%;
+  }
+
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+
+    position: absolute;
+    z-index: 2;
+    left: 72.5%;
+}
+
+
+
+/* CSS */
+.button-28 {
+  appearance: none;
+  background-color: transparent ;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 55px;
+  min-width: 210px;
+  outline: none;
+  padding: 10px 18px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 30%;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+
+.odd-row {
+  background-color: #f5f5f5;
+}
+
+.even-row {
+  background-color: #ffffff;
+}
+
+.document-icon{
+  padding-right: 4px;
+  color: rgb(56, 61, 61);
+}
+
+.sit-flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50%;
+}
+
+.document-info {
+  display: flex;
+  align-items: center;
+}
+
+.situacao-info {
+  width: fit-content;
+  color: white;
+  text-align: right;
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 95%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em
+}
+
+.style-vencimento{
+  color: red;
+}
+
+.cabecalho{
+  font-weight: bold;
+}
+
+.table-row-stripe {
+  background-color: #827575;
+}
+
+body{
+  background-color: #d9e0e7;
+}
+.white{
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-bottom: 1px;
+}
+
+#search{
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.container{
+  padding-bottom: 20px;
+}
