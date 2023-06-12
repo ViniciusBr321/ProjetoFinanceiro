@@ -12,12 +12,18 @@ export const Container = styled.div`
     animation: showSidebar .4s;
     z-index: 9999;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f9cea5dff0470058700004b01c2bffc685f787b3
     > svg {
         position: fixed;
         color: White;
         height: 3.9%;
         width: 1.7%;
         right: 97%;
+<<<<<<< HEAD
         bottom: 92%;
         cursor: pointer;
     }
@@ -26,6 +32,12 @@ export const Container = styled.div`
         text-decoration: none;
     }
 
+=======
+        bottom: 91%;
+        cursor: pointer;
+    }
+
+>>>>>>> f9cea5dff0470058700004b01c2bffc685f787b3
 
 @keyframes showSidebar {
     from{

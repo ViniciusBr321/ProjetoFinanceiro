@@ -1,6 +1,11 @@
 import React from 'react';
 import "./homerightbar.css"
+<<<<<<< HEAD
 import { Cell, PieChart, Pie, ComposedChart, Bar, BarChart, LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
+=======
+import Navbar from "../Navbar"
+import { Cell, PieChart, Pie, ComposedChart, Bar, BarChart, LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+>>>>>>> f9cea5dff0470058700004b01c2bffc685f787b3
 
 export default function HomeRightbar() {
   const data7 = [
@@ -333,6 +338,7 @@ export default function HomeRightbar() {
           </div>
           <div className='TasksContainer'>
             <div className='TaskChart'>
+<<<<<<< HEAD
               <p className='taskContainerText1'>Relatorio Clientes</p>
               <div className='heightPie'>
                 <PieChart width={290} height={200}>
@@ -353,15 +359,43 @@ export default function HomeRightbar() {
                   </Pie>
                 </PieChart>
               </div>
+=======
+              <p className='taskContainerText'>Relatorio Clientes</p>
+              <PieChart width={280} height={200}>
+                <Pie
+                  data={data7}
+                  cx={165}
+                  cy={130}
+                  startAngle={180}
+                  endAngle={0}
+                  innerRadius={50}
+                  outerRadius={80}
+                  fill="#8884d8"
+                  paddingAngle={0}
+                  dataKey="value">
+                  {data.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                </Pie>
+              </PieChart>
+>>>>>>> f9cea5dff0470058700004b01c2bffc685f787b3
               <p className='pieChartText'>8% dos clientes deixaram de fazer notinha este mês</p>
             </div>
             <div className='MonthlyEarning'>
               <p className='taskContainerText'>Pagar/Receber Anual</p>
               <div className='chartDirection'>
+<<<<<<< HEAD
                 <ComposedChart width={770} height={190} data={data6}>
                   <XAxis dataKey="name" />
                   <YAxis />
                   <Tooltip />
+=======
+                <ComposedChart width={770} height={200} data={data6}>
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+>>>>>>> f9cea5dff0470058700004b01c2bffc685f787b3
                   <CartesianGrid stroke="#f5f5f5" />
                   <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" />
                   <Bar dataKey="pv" barSize={20} fill="#413ea0" />
