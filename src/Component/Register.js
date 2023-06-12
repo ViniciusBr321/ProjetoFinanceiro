@@ -3,10 +3,6 @@ import "./Register.css";
 import Navbar from "./Navbar";
 import { DataGrid } from '@mui/x-data-grid';
 import Lapis from '../Component/Icons/lapis.png';
-<<<<<<< HEAD
-=======
-import { Button } from '@mui/material';
->>>>>>> f9cea5dff0470058700004b01c2bffc685f787b3
 import Modal from "react-modal";
 import { useState } from "react";
 

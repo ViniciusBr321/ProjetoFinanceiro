@@ -7,10 +7,6 @@ import { FaBars } from 'react-icons/fa';
 import Sidebar from '../Sidebar';
 import '../Header/index.css';
 import { ThemeProvider } from 'styled-components';
-<<<<<<< HEAD
-=======
-import { GlobalLayout } from "./GlobalStyle";
->>>>>>> f9cea5dff0470058700004b01c2bffc685f787b3
 
 
 const Header = () => {
