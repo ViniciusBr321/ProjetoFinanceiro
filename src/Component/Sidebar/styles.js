@@ -7,7 +7,7 @@ export const Container = styled.div`
     height: 100%;
     top: 0px;
     left: 0px;
-    width: 20%;
+    width: 18%;
     left: ${props => props.sidebar ? '0' : '-100%'};
     animation: showSidebar .4s;
     z-index: 9999;
@@ -22,8 +22,8 @@ export const Container = styled.div`
         cursor: pointer;
     }
 
-    > a {
-        text-decoration: none;
+    > logo-under{
+        width:10px !important;
     }
 
 

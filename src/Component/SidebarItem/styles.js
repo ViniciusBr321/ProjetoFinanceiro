@@ -11,7 +11,8 @@ export const Container = styled.div`
     border: 1px solid White;
     border-radius: 8px;
     margin: 0 15px 20px;
-    transition: 0.5s;;
+    transition: 0.5s;
+    text-decoration:none!important;
     > svg {
         margin: 0 20px;
     }

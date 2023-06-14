@@ -4,8 +4,11 @@ import { TableRow, TableCell } from '@mui/material';
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFile, faMoneyBillWave, faCheck, faTrashCan,faPenToSquare  } from '@fortawesome/free-solid-svg-icons';
+import { faPix } from '@fortawesome/free-brands-svg-icons';
 import '../../styles/index.css';
 import EditModal from './EditModal';
+import { format } from 'date-fns';
 
 function DataTable({ mhs, refresh }) {
   const [showEditModal, setShowEditModal] = useState(false);
@@ -18,15 +21,20 @@ function DataTable({ mhs, refresh }) {
     observacao: mhs.observacao
   });
 
-  const stripeRow = (mhs) => {
-    // Implemente a lógica para aplicar a classe 'table-row-stripe' em linhas ímpares
-    // Você pode usar o índice da linha para determinar se é ímpar ou par
-    // Por exemplo:
-    if (mhs.index % 2 === 0) {
-      return 'table-row-stripe';
-    } else {
+  const formatDate = (date) => {
+    // Verifique se a data não está vazia
+    if (!date) {
       return '';
     }
+
+    const parsedDate = new Date(date);
+    if (isNaN(parsedDate.getTime())) {
+      return ''; // Retorna uma string vazia se a data não for válida
+    }
+
+    // Converta a data para o formato brasileiro (DD-MM-AAAA)
+    const formattedDate = format(parsedDate, 'dd/MM/yyyy');
+    return formattedDate;
   };
 
   const deleteMhs = async () => {
@@ -96,11 +104,22 @@ function DataTable({ mhs, refresh }) {
     }
   };
 
+  const getFormaQuitacaoIcon = (formaQuitacao) => {
+    switch (formaQuitacao) {
+      case 'Dinheiro':
+        return <FontAwesomeIcon icon={faMoneyBillWave} />;
+      case 'PIX':
+        return <FontAwesomeIcon icon={faPix} />;
+      default:
+        return null;
+    }
+  };
+
   return (
-    <TableRow className={`status ${stripeRow(mhs)}`}>
+    <TableRow className={`status`}>
       <TableCell className="sit-flex">
         <div className="document-info">
-        <FontAwesomeIcon icon="fa-solid fa-file" className='document-icon' />
+          <FontAwesomeIcon icon={faFile} className='document-icon' />
           {mhs.num_docto}
         </div>
         <div
@@ -114,14 +133,14 @@ function DataTable({ mhs, refresh }) {
                 : mhs.situacao === 'Recebida'
                 ? '#5cb85c'
                 : '',
-              boxShadow:
+            boxShadow:
               mhs.situacao === 'Aberto'
-              ? '0px 10px 14px -7px #0578dc'
-              : mhs.situacao === 'Vencido'
-              ? '0px 10px 13px -7px #b56f05'
-              : mhs.situacao === 'Recebida'
-              ? '0px 10px 14px -7px #3e7327'
-              : '',
+                ? '0px 10px 14px -7px #0578dc'
+                : mhs.situacao === 'Vencido'
+                ? '0px 10px 13px -7px #b56f05'
+                : mhs.situacao === 'Recebida'
+                ? '0px 10px 14px -7px #3e7327'
+                : '',
           }}
         >
           {mhs.situacao}
@@ -129,24 +148,44 @@ function DataTable({ mhs, refresh }) {
       </TableCell>
 
       <TableCell>{mhs.fornecedor}</TableCell>
-      <TableCell>{mhs.dt_lancamento}</TableCell>
+      <TableCell>{formatDate(mhs.dt_lancamento)}</TableCell>
       <TableCell>
-        <span className="style-vencimento">{mhs.dt_vencimento}</span>
+        <span className="style-vencimento">{formatDate(mhs.dt_vencimento)}</span>
       </TableCell>
       <TableCell>R${mhs.valor}</TableCell>
-      <TableCell>{mhs.valor_recebido}</TableCell>
+      <TableCell className='nav-recebimento'>
+        <div className='recebimento'>
+          <div className='recebimento-child'>
+            {formatDate(mhs.dt_recebimento)}
+          </div>
+          <div className='recebimento-child'>R$ {mhs.valor_recebido}</div>
+          <div
+            className='recebimento-child '
+            style={{
+              color:
+                mhs.forma_quitacao === 'Dinheiro'
+                  ? '#1b5e20'
+                  : mhs.forma_quitacao === 'PIX'
+                  ? 'orange'
+                  : '',
+              textShadow:
+                mhs.forma_quitacao === 'Dinheiro'
+                  ? '0px 10px 14px -7px #1b5e20'
+                  : mhs.forma_quitacao === 'PIX'
+                  ? '0px 10px 13px -7px #b56f05'
+                  : '',
+            }}
+          >
+            {getFormaQuitacaoIcon(mhs.forma_quitacao)} {mhs.forma_quitacao}
+          </div>
+        </div>
+      </TableCell>
       <TableCell className="action-icons">
-        <i
-          className="fa fa-pencil-square-o edit"
-          id="Edit-icon"
-          onClick={handleEditModalShow}
-        ></i>
 
-        <i
-          className="fa fa-trash delete"
-          id="Delete-icon"
-          onClick={deleteConfirm}
-        ></i>
+      <FontAwesomeIcon icon={faPenToSquare} className='edit' id='Edit-icon' onClick={handleEditModalShow} />
+      <FontAwesomeIcon icon={faTrashCan} className='delete' id='Delete-icon' onClick={deleteConfirm} />
+      <FontAwesomeIcon icon={faCheck}  className='receive' id='Receive-icon' onClick={null}/>
+
       </TableCell>
 
       <EditModal

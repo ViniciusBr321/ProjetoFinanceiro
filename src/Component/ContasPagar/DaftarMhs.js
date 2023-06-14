@@ -11,13 +11,12 @@ import {
   TablePagination
 } from '@mui/material';
 import DataTable from './DataTable';
-import "../../styles/index.css"
 
 
 const DaftarMhs = () => {
   const [mhs, setMhs] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
-  const [ setSearch] = useState('');
+  const [ search, setSearch] = useState('');
   const [orderBy, setOrderBy] = useState('');
   const [order, setOrder] = useState('asc');
   const [page, setPage] = useState(0);
@@ -110,11 +109,11 @@ const DaftarMhs = () => {
     
     <div className="container" style={{ marginTop: '20px' }}>
       <div className="row">
-        <div className="col-lg-12">
+        <div className="col-lg-12  tabela">
 
             <TextField 
               id="search"
-              label="Filtrar"
+              label="Pesquisar"
               variant="outlined"
               onChange={handleSearchChange}
               style={{ marginBottom: '10px' }}

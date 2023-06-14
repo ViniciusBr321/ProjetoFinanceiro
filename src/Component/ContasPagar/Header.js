@@ -9,7 +9,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faPlus } from '@fortawesome/free-solid-svg-icons';
 import DatePicker from 'react-datepicker';
 import { format } from 'date-fns';
-import "../../styles/index.css"
 
 
 function Header() {

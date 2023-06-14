@@ -4,9 +4,9 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import "../../styles/index.css"
 
 function EditModal({ show, handleClose, formData, handleChange, handleSubmit }) {
+  
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header>
